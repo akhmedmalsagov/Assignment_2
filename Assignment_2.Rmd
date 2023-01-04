@@ -9,7 +9,9 @@ knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
 ```
 
 
-### Directions: Refer to [sections 3.1-3.10 in R for Data Science](https://r4ds.had.co.nz/data-visualisation.html), and the Section 1.1-1.2 Class Notes.
+### Directions: Refer to [sections 3.1-3.10 in R for Data Science](https://r4ds.had.co.nz/data-visualisation.html), and the Data Graphics Notes.
+
+### Upload the html file containing your code and answers to Moodle. 
 
 We'll start by loading the tidyverse package. 
 
@@ -99,21 +101,21 @@ Type summary here.
 
 ## Question 5
 
-The following code creates a new dataset, called `mpg_classes`, that displays the average highway mpg for each class of car. 
+### The following code creates a new dataset, called `mpg_classes`, that displays the average highway mpg for each class of car. 
 
 ```{r}
 mpg_classes <- mpg %>% group_by(class) %>% 
   summarize(Avg_hwy = mean(hwy))
 ```
 
-We display the dataset below. 
+### We display the dataset below. 
 
 ```{r}
 mpg_classes
 ```
 
 
-Create a bar graph with each class of vehicle on the x-axis, and `Avg_hwy` on the y-axis. Order the bars in descending order of heights. 
+### Create a bar graph with each class of vehicle on the x-axis, and `Avg_hwy` on the y-axis. Order the bars in descending order of heights. 
 
 ```{r}
 #Type code here

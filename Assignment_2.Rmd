@@ -34,10 +34,21 @@ In this assignment, we will continue to use the `mpg` dataset, referenced in the
 ### You are welcome to include plots in your response, but this is not required. 
 
 Type paragraph here. 
-
+1) For faceting on one variable we need to use facet_wrap(), and with two variables we need to use facet_grid()
+2) To not facet in rows and columns dimensions
+3) I think as an advantage, it is helpful to see separate graphs with only one certain data in it, depending on what a programmer is looking for to be shown. Which could be  a disadvantage if a programmer needs a bigger picture of more data in the single graph.
+4) You will get one row or column for each unique value of the variable.  
 
 ```{r}
-#Create plots here if you choose to. 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2) 
+```
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)
 ```
 
 
